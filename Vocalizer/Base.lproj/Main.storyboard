@@ -19,7 +19,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oen-2l-VVr">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="Image"/>
+                                <state key="normal" image="RecordImage"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hUM-K6-8NZ"/>
                                 </connections>
@@ -30,6 +30,19 @@
                                 <color key="textColor" red="0.090196078430000007" green="0.23921568630000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wu-1q-Yoi">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" image="StopImage">
+                                    <color key="titleColor" red="0.090196078430000007" green="0.23921568630000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopRecordingAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WgF-lp-dGo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -37,29 +50,37 @@
                             <constraint firstItem="oen-2l-VVr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RKO-vv-6o4"/>
                             <constraint firstItem="Mvw-Ep-pJ9" firstAttribute="centerX" secondItem="oen-2l-VVr" secondAttribute="centerX" id="adf-L3-x24"/>
                             <constraint firstItem="Mvw-Ep-pJ9" firstAttribute="top" secondItem="oen-2l-VVr" secondAttribute="bottom" constant="8" id="jzJ-wY-awf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6Wu-1q-Yoi" secondAttribute="bottom" constant="71" id="mVB-Ux-EPR"/>
+                            <constraint firstItem="6Wu-1q-Yoi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nig-2Q-eXK"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="oen-2l-VVr"/>
                                 <exclude reference="Mvw-Ep-pJ9"/>
+                                <exclude reference="6Wu-1q-Yoi"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="HH3-ro-hjy"/>
                                 <exclude reference="RKO-vv-6o4"/>
                                 <exclude reference="adf-L3-x24"/>
                                 <exclude reference="jzJ-wY-awf"/>
+                                <exclude reference="nig-2Q-eXK"/>
+                                <exclude reference="mVB-Ux-EPR"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="oen-2l-VVr"/>
                                 <include reference="Mvw-Ep-pJ9"/>
+                                <include reference="6Wu-1q-Yoi"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="HH3-ro-hjy"/>
                                 <include reference="RKO-vv-6o4"/>
                                 <include reference="adf-L3-x24"/>
                                 <include reference="jzJ-wY-awf"/>
+                                <include reference="nig-2Q-eXK"/>
+                                <include reference="mVB-Ux-EPR"/>
                             </mask>
                         </variation>
                     </view>
@@ -73,6 +94,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="100" height="100"/>
+        <image name="RecordImage" width="100" height="100"/>
+        <image name="StopImage" width="50" height="50"/>
     </resources>
 </document>
