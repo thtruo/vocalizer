@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Vocalizer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="Vocalizer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,7 +25,7 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hUM-K6-8NZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvw-Ep-pJ9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In progress..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvw-Ep-pJ9">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" red="0.090196078430000007" green="0.23921568630000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,12 +62,12 @@
                                 <exclude reference="6Wu-1q-Yoi"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="mVB-Ux-EPR"/>
+                                <exclude reference="nig-2Q-eXK"/>
                                 <exclude reference="HH3-ro-hjy"/>
                                 <exclude reference="RKO-vv-6o4"/>
                                 <exclude reference="adf-L3-x24"/>
                                 <exclude reference="jzJ-wY-awf"/>
-                                <exclude reference="nig-2Q-eXK"/>
-                                <exclude reference="mVB-Ux-EPR"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -76,16 +77,16 @@
                                 <include reference="6Wu-1q-Yoi"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="mVB-Ux-EPR"/>
+                                <include reference="nig-2Q-eXK"/>
                                 <include reference="HH3-ro-hjy"/>
                                 <include reference="RKO-vv-6o4"/>
                                 <include reference="adf-L3-x24"/>
                                 <include reference="jzJ-wY-awf"/>
-                                <include reference="nig-2Q-eXK"/>
-                                <include reference="mVB-Ux-EPR"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Record" prompt="Click the microphone start recording" id="gwl-sp-BgL"/>
+                    <navigationItem key="navigationItem" title="Record" prompt="Tap the microphone to start recording" id="gwl-sp-BgL"/>
                     <connections>
                         <outlet property="recordButton" destination="oen-2l-VVr" id="BwX-Az-FnP"/>
                         <outlet property="recordingStatus" destination="Mvw-Ep-pJ9" id="uim-O4-ZOc"/>
@@ -96,17 +97,79 @@
             </objects>
             <point key="canvasLocation" x="1056" y="228"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="ad4-Rw-8ae">
             <objects>
-                <viewController id="I5v-VV-Ipq" sceneMemberID="viewController">
+                <viewController id="I5v-VV-Ipq" customClass="PlaySoundsViewController" customModule="Vocalizer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="G5f-be-jU2"/>
                         <viewControllerLayoutGuide type="bottom" id="bmV-nn-tm3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OtQ-S4-3LV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBT-IK-Tbb">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Slow"/>
+                                <connections>
+                                    <action selector="playSlowAudio:" destination="I5v-VV-Ipq" eventType="touchUpInside" id="lqJ-lI-Jwm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxs-4h-1sC">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Fast"/>
+                                <connections>
+                                    <action selector="playFastAudio:" destination="I5v-VV-Ipq" eventType="touchUpInside" id="vaZ-D0-FNF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7CM-OA-jqW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="StopImage"/>
+                                <connections>
+                                    <action selector="stopRecordingAudio:" destination="I5v-VV-Ipq" eventType="touchUpInside" id="D5Y-fv-Im6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Uxs-4h-1sC" firstAttribute="top" secondItem="G5f-be-jU2" secondAttribute="bottom" constant="50" id="1L4-91-g1Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uxs-4h-1sC" secondAttribute="trailing" constant="24" id="ENc-Tx-ecx"/>
+                            <constraint firstItem="MBT-IK-Tbb" firstAttribute="leading" secondItem="OtQ-S4-3LV" secondAttribute="leadingMargin" constant="24" id="X6I-T2-DdB"/>
+                            <constraint firstItem="MBT-IK-Tbb" firstAttribute="top" secondItem="G5f-be-jU2" secondAttribute="bottom" constant="50" id="XTH-yq-fEM"/>
+                            <constraint firstItem="bmV-nn-tm3" firstAttribute="top" secondItem="7CM-OA-jqW" secondAttribute="bottom" constant="71" id="Y3Y-hc-5Tp"/>
+                            <constraint firstItem="7CM-OA-jqW" firstAttribute="centerX" secondItem="OtQ-S4-3LV" secondAttribute="centerX" id="gnS-Gb-i0f"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="MBT-IK-Tbb"/>
+                                <exclude reference="Uxs-4h-1sC"/>
+                                <exclude reference="7CM-OA-jqW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="X6I-T2-DdB"/>
+                                <exclude reference="XTH-yq-fEM"/>
+                                <exclude reference="1L4-91-g1Q"/>
+                                <exclude reference="ENc-Tx-ecx"/>
+                                <exclude reference="gnS-Gb-i0f"/>
+                                <exclude reference="Y3Y-hc-5Tp"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="MBT-IK-Tbb"/>
+                                <include reference="Uxs-4h-1sC"/>
+                                <include reference="7CM-OA-jqW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="X6I-T2-DdB"/>
+                                <include reference="XTH-yq-fEM"/>
+                                <include reference="1L4-91-g1Q"/>
+                                <include reference="ENc-Tx-ecx"/>
+                                <include reference="gnS-Gb-i0f"/>
+                                <include reference="Y3Y-hc-5Tp"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Nd-ru-mYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -133,7 +196,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Fast" width="100" height="100"/>
         <image name="RecordImage" width="100" height="100"/>
+        <image name="Slow" width="100" height="100"/>
         <image name="StopImage" width="50" height="50"/>
     </resources>
 </document>
