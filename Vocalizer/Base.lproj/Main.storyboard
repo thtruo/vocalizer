@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -42,7 +43,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="stopRecordingAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WgF-lp-dGo"/>
-                                    <segue destination="I5v-VV-Ipq" kind="show" id="Rrb-v0-1BG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,6 +91,7 @@
                         <outlet property="recordButton" destination="oen-2l-VVr" id="BwX-Az-FnP"/>
                         <outlet property="recordingStatus" destination="Mvw-Ep-pJ9" id="uim-O4-ZOc"/>
                         <outlet property="stopButtonStatus" destination="6Wu-1q-Yoi" id="gvV-PG-VYY"/>
+                        <segue destination="I5v-VV-Ipq" kind="show" identifier="stopRecording" id="W22-YX-uyM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -147,12 +148,12 @@
                                 <exclude reference="7CM-OA-jqW"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Y3Y-hc-5Tp"/>
+                                <exclude reference="gnS-Gb-i0f"/>
                                 <exclude reference="X6I-T2-DdB"/>
                                 <exclude reference="XTH-yq-fEM"/>
                                 <exclude reference="1L4-91-g1Q"/>
                                 <exclude reference="ENc-Tx-ecx"/>
-                                <exclude reference="gnS-Gb-i0f"/>
-                                <exclude reference="Y3Y-hc-5Tp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -162,12 +163,12 @@
                                 <include reference="7CM-OA-jqW"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Y3Y-hc-5Tp"/>
+                                <include reference="gnS-Gb-i0f"/>
                                 <include reference="X6I-T2-DdB"/>
                                 <include reference="XTH-yq-fEM"/>
                                 <include reference="1L4-91-g1Q"/>
                                 <include reference="ENc-Tx-ecx"/>
-                                <include reference="gnS-Gb-i0f"/>
-                                <include reference="Y3Y-hc-5Tp"/>
                             </mask>
                         </variation>
                     </view>

@@ -16,6 +16,7 @@
 		033B70381C86EFF900C9DF28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033B70361C86EFF900C9DF28 /* LaunchScreen.storyboard */; };
 		033B70431C86EFF900C9DF28 /* VocalizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033B70421C86EFF900C9DF28 /* VocalizerTests.swift */; };
 		033B704E1C86EFF900C9DF28 /* VocalizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033B704D1C86EFF900C9DF28 /* VocalizerUITests.swift */; };
+		0367D3401C9155C60046F4F9 /* RecordedAudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0367D33F1C9155C60046F4F9 /* RecordedAudioModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		033B70491C86EFF900C9DF28 /* VocalizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VocalizerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		033B704D1C86EFF900C9DF28 /* VocalizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocalizerUITests.swift; sourceTree = "<group>"; };
 		033B704F1C86EFF900C9DF28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0367D33F1C9155C60046F4F9 /* RecordedAudioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudioModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				033B702D1C86EFF900C9DF28 /* AppDelegate.swift */,
 				033B702F1C86EFF900C9DF28 /* RecordSoundsViewController.swift */,
+				0367D33F1C9155C60046F4F9 /* RecordedAudioModel.swift */,
 				033B70311C86EFF900C9DF28 /* Main.storyboard */,
 				032DC7B41C8D2B46007520B9 /* movie_quote.mp3 */,
 				032DC7B21C8D1BA1007520B9 /* PlaySoundsViewController.swift */,
@@ -265,6 +268,7 @@
 			files = (
 				033B70301C86EFF900C9DF28 /* RecordSoundsViewController.swift in Sources */,
 				032DC7B31C8D1BA1007520B9 /* PlaySoundsViewController.swift in Sources */,
+				0367D3401C9155C60046F4F9 /* RecordedAudioModel.swift in Sources */,
 				033B702E1C86EFF900C9DF28 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
