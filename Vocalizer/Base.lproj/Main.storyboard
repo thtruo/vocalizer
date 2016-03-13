@@ -131,14 +131,23 @@
                                     <action selector="stopRecordingAudio:" destination="I5v-VV-Ipq" eventType="touchUpInside" id="D5Y-fv-Im6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsR-zz-OwY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Chipmunk"/>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="I5v-VV-Ipq" eventType="touchUpInside" id="Rf1-sg-lAi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Uxs-4h-1sC" firstAttribute="top" secondItem="G5f-be-jU2" secondAttribute="bottom" constant="50" id="1L4-91-g1Q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Uxs-4h-1sC" secondAttribute="trailing" constant="24" id="ENc-Tx-ecx"/>
+                            <constraint firstItem="TsR-zz-OwY" firstAttribute="top" secondItem="Uxs-4h-1sC" secondAttribute="bottom" constant="50" id="JmU-jz-AIZ"/>
                             <constraint firstItem="MBT-IK-Tbb" firstAttribute="leading" secondItem="OtQ-S4-3LV" secondAttribute="leadingMargin" constant="24" id="X6I-T2-DdB"/>
                             <constraint firstItem="MBT-IK-Tbb" firstAttribute="top" secondItem="G5f-be-jU2" secondAttribute="bottom" constant="50" id="XTH-yq-fEM"/>
                             <constraint firstItem="bmV-nn-tm3" firstAttribute="top" secondItem="7CM-OA-jqW" secondAttribute="bottom" constant="71" id="Y3Y-hc-5Tp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TsR-zz-OwY" secondAttribute="trailing" constant="24" id="Zpt-21-qjP"/>
                             <constraint firstItem="7CM-OA-jqW" firstAttribute="centerX" secondItem="OtQ-S4-3LV" secondAttribute="centerX" id="gnS-Gb-i0f"/>
                         </constraints>
                         <variation key="default">
@@ -146,14 +155,17 @@
                                 <exclude reference="MBT-IK-Tbb"/>
                                 <exclude reference="Uxs-4h-1sC"/>
                                 <exclude reference="7CM-OA-jqW"/>
+                                <exclude reference="TsR-zz-OwY"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Y3Y-hc-5Tp"/>
-                                <exclude reference="gnS-Gb-i0f"/>
                                 <exclude reference="X6I-T2-DdB"/>
                                 <exclude reference="XTH-yq-fEM"/>
                                 <exclude reference="1L4-91-g1Q"/>
                                 <exclude reference="ENc-Tx-ecx"/>
+                                <exclude reference="JmU-jz-AIZ"/>
+                                <exclude reference="Zpt-21-qjP"/>
+                                <exclude reference="gnS-Gb-i0f"/>
+                                <exclude reference="Y3Y-hc-5Tp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -161,14 +173,17 @@
                                 <include reference="MBT-IK-Tbb"/>
                                 <include reference="Uxs-4h-1sC"/>
                                 <include reference="7CM-OA-jqW"/>
+                                <include reference="TsR-zz-OwY"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Y3Y-hc-5Tp"/>
-                                <include reference="gnS-Gb-i0f"/>
                                 <include reference="X6I-T2-DdB"/>
                                 <include reference="XTH-yq-fEM"/>
                                 <include reference="1L4-91-g1Q"/>
                                 <include reference="ENc-Tx-ecx"/>
+                                <include reference="JmU-jz-AIZ"/>
+                                <include reference="Zpt-21-qjP"/>
+                                <include reference="gnS-Gb-i0f"/>
+                                <include reference="Y3Y-hc-5Tp"/>
                             </mask>
                         </variation>
                     </view>
@@ -197,6 +212,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Chipmunk" width="100" height="100"/>
         <image name="Fast" width="100" height="100"/>
         <image name="RecordImage" width="100" height="100"/>
         <image name="Slow" width="100" height="100"/>
