@@ -168,16 +168,16 @@
                                 <exclude reference="bcr-x6-2xx"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Y3Y-hc-5Tp"/>
+                                <exclude reference="gnS-Gb-i0f"/>
                                 <exclude reference="X6I-T2-DdB"/>
                                 <exclude reference="XTH-yq-fEM"/>
+                                <exclude reference="JmU-jz-AIZ"/>
+                                <exclude reference="Zpt-21-qjP"/>
                                 <exclude reference="1L4-91-g1Q"/>
                                 <exclude reference="ENc-Tx-ecx"/>
                                 <exclude reference="AXS-oc-gca"/>
                                 <exclude reference="Gix-Og-6TP"/>
-                                <exclude reference="JmU-jz-AIZ"/>
-                                <exclude reference="Zpt-21-qjP"/>
-                                <exclude reference="gnS-Gb-i0f"/>
-                                <exclude reference="Y3Y-hc-5Tp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -189,16 +189,16 @@
                                 <include reference="bcr-x6-2xx"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Y3Y-hc-5Tp"/>
+                                <include reference="gnS-Gb-i0f"/>
                                 <include reference="X6I-T2-DdB"/>
                                 <include reference="XTH-yq-fEM"/>
+                                <include reference="JmU-jz-AIZ"/>
+                                <include reference="Zpt-21-qjP"/>
                                 <include reference="1L4-91-g1Q"/>
                                 <include reference="ENc-Tx-ecx"/>
                                 <include reference="AXS-oc-gca"/>
                                 <include reference="Gix-Og-6TP"/>
-                                <include reference="JmU-jz-AIZ"/>
-                                <include reference="Zpt-21-qjP"/>
-                                <include reference="gnS-Gb-i0f"/>
-                                <include reference="Y3Y-hc-5Tp"/>
                             </mask>
                         </variation>
                     </view>
